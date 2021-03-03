@@ -1,0 +1,171 @@
+hostname
+--------------------------------------------------------------------------------------------------
+uname -a
+--------------------------------------------------------------------------------------------------
+cat /pro/version
+--------------------------------------------------------------------------------------------------
+TCM@debian:~$ cat /etc/issue
+--------------------------------------------------------------------------------------------------
+Debian GNU/Linux 6.0 \n \l
+--------------------------------------------------------------------------------------------------
+TCM@debian:~$ cat /proc/version
+Linux version 2.6.32-5-amd64 (Debian 2.6.32-48squeeze6) (jmm@debian.org) (gcc version 4.3.5 (Debian 4.3.5-4) ) #1 SMP Tue May 13 16:34:35 UTC 2014
+--------------------------------------------------------------------------------------------------
+TCM@debian:~$ ps
+  PID TTY          TIME CMD
+ 2285 pts/1    00:00:00 bash
+ 2436 pts/1    00:00:00 ps
+--------------------------------------------------------------------------------------------------
+TCM@debian:~$ ps aux
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root         1  0.0  0.0   8396   812 ?        Ss   20:39   0:00 init [2]  
+root         2  0.0  0.0      0     0 ?        S    20:39   0:00 [kthreadd]
+root         3  0.0  0.0      0     0 ?        S    20:39   0:00 [migration/0]
+ps aux | grep root
+--------------------------------------------------------------------------------------------------
+TCM@debian:~$ ps aux | grep TCM
+root      2259  0.0  0.1  76728  3340 ?        Ss   20:41   0:00 sshd: TCM [priv] 
+TCM       2261  0.0  0.0  76728  1736 ?        S    20:41   0:00 sshd: TCM@pts/0  
+TCM       2262  0.0  0.0  19300  2048 pts/0    Ss+  20:41   0:00 -bash
+root      2267  0.0  0.1  76728  3352 ?        Ss   20:41   0:00 sshd: TCM [priv] 
+TCM       2284  0.0  0.0  76728  1712 ?        S    20:43   0:00 sshd: TCM@pts/1  
+TCM       2285  0.0  0.0  19276  2052 pts/1    Ss   20:43   0:00 -bash
+TCM       2472  0.0  0.0  16380  1176 pts/1    R+   21:05   0:00 ps aux
+TCM       2473  0.0  0.0   7588   852 pts/1    S+   21:05   0:00 grep TCM
+--------------------------------------------------------------------------------------------------
+cat /etc/issue
+--------------------------------------------------------------------------------------------------
+ls -alh /usr/bin/
+--------------------------------------------------------------------------------------------------
+TCM@debian:~$ sudo -l
+Matching Defaults entries for TCM on this host:
+    env_reset, env_keep+=LD_PRELOAD
+
+User TCM may run the following commands on this host:
+    (root) NOPASSWD: /usr/sbin/iftop
+    (root) NOPASSWD: /usr/bin/find
+    (root) NOPASSWD: /usr/bin/nano
+    (root) NOPASSWD: /usr/bin/vim
+    (root) NOPASSWD: /usr/bin/man
+    (root) NOPASSWD: /usr/bin/awk
+    (root) NOPASSWD: /usr/bin/less
+    (root) NOPASSWD: /usr/bin/ftp
+    (root) NOPASSWD: /usr/bin/nmap
+    (root) NOPASSWD: /usr/sbin/apache2
+    (root) NOPASSWD: /bin/more
+---------------------------------------------------------------------------------------------------
+TCM@debian:~$ id
+uid=1000(TCM) gid=1000(user) groups=1000(user),24(cdrom),25(floppy),29(audio),30(dip),44(video),46(plugdev)
+-------------------------------------------------------------------------------------------------
+TCM@debian:~$ cat /etc/passwd
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/bin/sh
+bin:x:2:2:bin:/bin:/bin/sh
+sys:x:3:3:sys:/dev:/bin/sh
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/bin/sh
+man:x:6:12:man:/var/cache/man:/bin/sh
+lp:x:7:7:lp:/var/spool/lpd:/bin/sh
+mail:x:8:8:mail:/var/mail:/bin/sh
+news:x:9:9:news:/var/spool/news:/bin/sh
+uucp:x:10:10:uucp:/var/spool/uucp:/bin/sh
+proxy:x:13:13:proxy:/bin:/bin/sh
+www-data:x:33:33:www-data:/var/www:/bin/sh
+backup:x:34:34:backup:/var/backups:/bin/sh
+list:x:38:38:Mailing List Manager:/var/list:/bin/sh
+irc:x:39:39:ircd:/var/run/ircd:/bin/sh
+gnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/bin/sh
+nobody:x:65534:65534:nobody:/nonexistent:/bin/sh
+libuuid:x:100:101::/var/lib/libuuid:/bin/sh
+Debian-exim:x:101:103::/var/spool/exim4:/bin/false
+sshd:x:102:65534::/var/run/sshd:/usr/sbin/nologin
+statd:x:103:65534::/var/lib/nfs:/bin/false
+TCM:x:1000:1000:user,,,:/home/user:/bin/bash
+TCM@debian:~$ 
+----------------------------------------------------------------------------------------------------------
+TCM@debian:~$ cat /etc/shadow
+root:$6$Tb/euwmK$OXA.dwMeOAcopwBl68boTG5zi65wIHsc84OWAIye5VITLLtVlaXvRDJXET..it8r.jbrlpfZeMdwD3B0fGxJI0:17298:0:99999:7:::
+daemon:*:17298:0:99999:7:::
+bin:*:17298:0:99999:7:::
+sys:*:17298:0:99999:7:::
+sync:*:17298:0:99999:7:::
+games:*:17298:0:99999:7:::
+man:*:17298:0:99999:7:::
+lp:*:17298:0:99999:7:::
+mail:*:17298:0:99999:7:::
+news:*:17298:0:99999:7:::
+uucp:*:17298:0:99999:7:::
+proxy:*:17298:0:99999:7:::
+www-data:*:17298:0:99999:7:::
+backup:*:17298:0:99999:7:::
+list:*:17298:0:99999:7:::
+irc:*:17298:0:99999:7:::
+gnats:*:17298:0:99999:7:::
+nobody:*:17298:0:99999:7:::
+libuuid:!:17298:0:99999:7:::
+Debian-exim:!:17298:0:99999:7:::
+sshd:*:17298:0:99999:7:::
+statd:*:17299:0:99999:7:::
+TCM:$6$hDHLpYuo$El6r99ivR20zrEPUnujk/DgKieYIuqvf9V7M.6t6IZzxpwxGIvhqTwciEw16y/B.7ZrxVk1LOHmVb/xyEyoUg.:18431:0:99999:7:::
+
+----------------------------------------------------------------------------
+TCM@debian:~$ cat /etc/group
+root:x:0:
+daemon:x:1:
+bin:x:2:
+sys:x:3:
+adm:x:4:
+------------------------------------------------
+history
+--------------------------------------------------------------------------------------------------
+TCM@debian:~$ ip a
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 16436 qdisc noqueue state UNKNOWN 
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 9001 qdisc pfifo_fast state UP qlen 1000
+    link/ether 02:15:37:a4:a2:cf brd ff:ff:ff:ff:ff:ff
+    inet 10.10.157.30/16 brd 10.10.255.255 scope global eth0
+    inet6 fe80::15:37ff:fea4:a2cf/64 scope link 
+       valid_lft forever preferred_lft forever
+
+--------------------------------------------------------------------------------------------------
+TCM@debian:~$ ip route
+10.10.0.0/16 dev eth0  proto kernel  scope link  src 10.10.157.30 
+default via 10.10.0.1 dev eth0 
+
+--------------------------------------------------------------------------------------------------
+TCM@debian:~$ netstat -ano
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       Timer
+tcp        0      0 0.0.0.0:111             0.0.0.0:*               LISTEN      off (0.00/0/0)
+tcp        0      0 0.0.0.0:8080            0.0.0.0:*               LISTEN      off (0.00/0/0)
+tcp        0      0 0.0.0.0:58961           0.0.0.0:*               LISTEN      off (0.00/0/0)
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      off (0.00/0/0)
+tcp        0      0 0.0.0.0:25              0.0.0.0:*               LISTEN      off (0.00/0/0)
+tcp        0      0 0.0.0.0:56188           0.0.0.0:*               LISTEN      off (0.00/0/0)
+tcp        0      0 0.0.0.0:37857           0.0.0.0:*               LISTEN      off (0.00/0/0)
+tcp        0      0 0.0.0.0:2049            0.0.0.0:*               LISTEN      off (0.00/0/0)
+tcp        0      0 10.10.157.30:22         10.11.17.175:49650      ESTABLISHED keepalive (4654.45/0/0)
+tcp        0      0 10.10.157.30:22         10.100.1.8:56780        ESTABLISHED keepalive (4629.77/0/0)
+tcp6       0      0 :::80                   :::*                    LISTEN      off (0.00/0/0)
+tcp6       0      0 :::22                   :::*                    LISTEN      off (0.00/0/0)
+udp        0      0 0.0.0.0:68              0.0.0.0:*                           off (0.00/0/0)
+udp        0      0 0.0.0.0:111             0.0.0.0:*                           off (0.00/0/0)
+udp        0      0 0.0.0.0:43250           0.0.0.0:*                           off (0.00/0/0)
+udp        0      0 0.0.0.0:41849           0.0.0.0:*                           off (0.00/0/0)
+udp        0      0 0.0.0.0:33530           0.0.0.0:*                           off (0.00/0/0)
+udp        0      0 0.0.0.0:2049            0.0.0.0:*                           off (0.00/0/0)
+udp        0      0 127.0.0.1:663           0.0.0.0:*                           off (0.00/0/0)
+Active UNIX domain sockets (servers and established)
+Proto RefCnt Flags       Type       State         I-Node   Path
+unix  6      [ ]         DGRAM                    4168     /dev/log
+unix  2      [ ACC ]     STREAM     LISTENING     4276     /var/run/acpid.socket
+unix  2      [ ]         DGRAM                    2093     @/org/kernel/udev/udevd
+unix  2      [ ACC ]     STREAM     LISTENING     4480     /var/run/apache2/cgisock.1773
+-------------------------------------------------------------------------------------------------------
+TCM@debian:~$ dnsdomainname 
+localdomain
+--------------------------------------------------------------------------------------------------------
+
